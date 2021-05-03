@@ -55,7 +55,7 @@ router.delete("/persons/:id", (req, res) => {
   const person = persons.find((item) => item.id === id);
 
   if (person) {
-    // persons = persons.filter((elem) => elem.id !== id);
+    persons = persons.filter((elem) => elem.id !== id);
     res.status(200).end();
   } else res.status(404).end();
 });
