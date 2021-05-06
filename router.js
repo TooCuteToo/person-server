@@ -33,7 +33,7 @@ router.post("/persons", (req, res) => {
 });
 
 router.put("/persons/:id", (req, res) => {
-  Person.findByIdAndUpdate(req.params.id, { ...req.body })
+  Person.findByIdAndUpdate(req.params.id, { number: req.body.number })
     .then(res.status(201).end())
     .catch(res.status(401).end());
 });
