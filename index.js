@@ -18,5 +18,15 @@ morgan.token("json", (req) => JSON.stringify(req.body));
 
 app.use("/api", router);
 
+const errorHandler = (error, req, res, next) => {
+  if (error.name === "CastError") {
+    return res.status(400).send({ error: "malformatted id" });
+  }
+
+  next(error);
+};
+
+app.use(errorHandler);
+
 const { PORT } = process.env;
 app.listen(PORT, () => console.log(`Server is running at PORT: ${PORT}`));

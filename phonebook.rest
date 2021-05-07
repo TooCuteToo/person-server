@@ -1,7 +1,7 @@
-DELETE  http://localhost:3001/api/persons/609155b08fa38f2c3be1ceac
+DELETE  http://localhost:3001/api/persons/609155b08fa38f2c3be1ceacd
 ###
 
-GET http://localhost:3001/api/persons/609155b08fa38f2c3be1ceac
+GET http://localhost:3001/api/persons/609155b08fa38f2c3be1cead
 
 ###
 POST http://localhost:3001/api/persons/ HTTP/1.1
@@ -13,10 +13,10 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3001/api/persons/6093dd887457d230d1a13166
+PUT http://localhost:3001/api/persons/609155b08fa38f2c3be1cead
 Content-Type: application/json
 
 {
-  "name": "Luong Tuan ANh",
-  "number": "1234"
+  "name": "Luong Tuan Ah",
+  "number": ""
 }
